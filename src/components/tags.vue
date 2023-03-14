@@ -11,22 +11,6 @@
 				<el-icon @click="closeTags(index)"><Close /></el-icon>
 			</li>
 		</ul>
-		<div class="tags-close-box">
-			<el-dropdown @command="handleTags">
-				<el-button size="small" type="primary">
-					标签选项
-					<el-icon class="el-icon--right">
-						<arrow-down />
-					</el-icon>
-				</el-button>
-				<template #dropdown>
-					<el-dropdown-menu size="small">
-						<el-dropdown-item command="other">关闭其他</el-dropdown-item>
-						<el-dropdown-item command="all">关闭所有</el-dropdown-item>
-					</el-dropdown-menu>
-				</template>
-			</el-dropdown>
-		</div>
 	</div>
 </template>
 
@@ -128,6 +112,7 @@ const handleTags = (command: string) => {
 	-webkit-transition: all 0.3s ease-in;
 	-moz-transition: all 0.3s ease-in;
 	transition: all 0.3s ease-in;
+	background-color: rgb(95, 151, 210) !important;
 }
 
 .tags-li:not(.active):hover {
